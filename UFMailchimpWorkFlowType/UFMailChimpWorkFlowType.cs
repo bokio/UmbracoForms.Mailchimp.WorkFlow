@@ -1,4 +1,7 @@
-﻿using System;
+﻿/**
+ * Source: https://github.com/harikrishna43/UmbracoForms.Mailchimp.WorkFlow
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using MailChimp.Net;
@@ -16,16 +19,16 @@ namespace UFMailchimpWorkFlowType
     {
         #region Settings
 
-        [Umbraco.Forms.Core.Attributes.Setting("API KEY", description = "Enter the Mailchimp API key.", view = "TextField")]
+        [Umbraco.Forms.Core.Attributes.Setting("API KEY", view = "TextField", description = "Enter the Mailchimp API key.")]
         public string ApiKey { get; set; }
 
-        [Umbraco.Forms.Core.Attributes.Setting("List ID", description = "Enter the Mailchimp List ID.)", view = "TextField")]
+        [Umbraco.Forms.Core.Attributes.Setting("List ID", view = "TextField", description = "Enter the Mailchimp List ID.)")]
         public string ListID { get; set; }
 
-        [Umbraco.Forms.Core.Attributes.Setting("Fields", description = "Map the needed fields .Minimum Email field for subscribe.", view = "FieldMapper")]
+        [Umbraco.Forms.Core.Attributes.Setting("Fields", view = "FieldMapper", description = "Map the needed fields .Minimum Email field for subscribe.")]
         public string Fields { get; set; }
 
-        [Umbraco.Forms.Core.Attributes.Setting("Tags", view = "TextField", description = "List of Tags. Separate by semicolon ';'. Tag must be created before being used. i.e: Bokio User;Help Center")]
+        [Umbraco.Forms.Core.Attributes.Setting("Tags", view = "TextField", description = "List of Tags. Separate by semicolon ';'. Tag must be created before being used. i.e: User; Help Center")]
         public string Tags { get; set; }
 
         #endregion
